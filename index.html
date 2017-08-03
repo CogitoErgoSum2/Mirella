@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>~Pizzaria Mirella~</title>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        
+		<link rel="stylesheet" href="css/screen.css" />
+		<link rel="stylesheet" href="css/lightbox.css" />
+        
+        <script src="js/script.js"></script>
+        <script src="js/jquery-2.1.1.min.js">
+        
+        </script><script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/lightbox.js"></script>
+        
+    <script>
+	$(document).ready(function(e) {
+		$('#cont2, #cont3, #cont4, #cont5, #cont6, #cont7, #cont8, #div2, #div3, #div4').hide(0);
+    })
+	function alterar(aba){
+		$('#cont1, #cont2, #cont3, #cont4, #cont5, #cont6, #cont7, #cont8').fadeOut(100);
+		$(aba).fadeToggle(100);
+		$('#div2, #div3, #div4').hide(0);
+	}
+	
+	function alterar2(aba){
+		$('#div1, #div2, #div3, #div4').fadeOut(100);
+		$(aba).fadeToggle(100);
+	}
+	
+	
+/*LightBox*/
+	jQuery(document).ready(function($) {
+      $('a').smoothScroll({
+        speed: 1000,
+        easing: 'easeInOutCubic'
+      });
+
+      $('.showOlderChanges').on('click', function(e){
+        $('.changelog .old').slideDown('slow');
+        $(this).fadeOut();
+        e.preventDefault();
+      })
+  	});
+
+  	var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-2196019-1']);
+  		_gaq.push(['_trackPageview']);
+
+  	(function() {
+    	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  	})();
+	
+/*Formulario*/
+
+	function valida_form (){
+	
+	if(document.getElementById("name").value=="") {
+	alert( "Please input a name" );
+	document.getElementById("name"); return false;
+	}
+	
+	var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	if(!filter.test(document.getElementById("email").value)){
+	alert('Email Invalid');
+	document.getElementById("email").focus();
+	return false
+	}
+	
+	if(document.getElementById("feedback").value=="") {
+	alert( "Message field empty" );
+	document.getElementById("feedback"); return false;
+	}
+	
+	else{
+	alert('Thanks for the message\n\nWe will answer you as fast as possible');
+	window.location="index.html";
+	}
+	}
+	</script>
+    
+    </head>
+    <body>
+        
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+        </ul>
+        
+    	<div class="banner"><img src="images/Mirella.png" <a onClick="alterar('#cont1')"></a>
+        </div>
+        
+        
+<!--Menu-->
+        <div class="central">
+   			<nav id="menu">
+				<ul>
+					<li><a onClick="alterar('#cont1')">Home</a></li>
+					<li><a onClick="alterar('#cont2')">Menu</a></li>
+          <li><a onClick="alterar('#cont5')">Sobre Nós</a></li>
+          <li><a onClick="alterar('#cont7')">Galeria</a></li>
+					<!--<li><a onClick="alterar('#cont3')">About Yosemite</a></li>
+					<li><a onClick="alterar('#cont8')">Geography</a></li>
+					<li><a onClick="alterar('#cont4')">Things to do</a></li>-->
+					<!--<li><a onClick="alterar('#cont6')">Contact</a></li>-->
+				</ul>
+			</nav>
+            
+            
+            
+<!--Home-->
+        <div class="conteudo" id="cont1">
+        <div class="slideimg">
+           		<figure>
+  					<div id="slider">
+      					<a onClick="alterar('#cont2')"><img src="images/Menu.jpg"/></a>
+      					<a onClick="alterar('#cont5')"><img src="images/Mirella-banner.jpg"/></a>
+      					<a onClick="alterar('#cont7')"><img src="images/Galeria.jpg"/></a>
+      					
+  					</div>
+   					<figcaption></figcaption>
+				</figure>
+           	</div>
+            
+
+             
+                             
+            
+            <h3>Horário de funcionamento</h3>
+                             <h4>Quarta, Quinta e Domingo: 18:00 às 00:00</h4>
+                             <h4>Sexta e Sábado:  18:00 às 01:00</h4>
+                             
+            
+            
+            <br></br>
+            <br></br>
+            <br></br>
+<div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td align="center"></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+            
+            
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>
+
+            
+            
+            
+<!--Menu-->
+        <div class="conteudo" id="cont2">
+            <img src="images/cardapio.jpg" style="border: solid 2px #FFFFFF;"><br><br>
+        <div class="esq">
+        <h3>Pizzas Salgadas</h3>
+
+<p>01 - ALHO e OLÉO<br>
+Alho Frito e Mussarela<br>
+R$: 26,00<br></p>
+
+<p>02 - ATUM 1 <br>
+Atum Especial e Cebola<br>
+R$: 26,00<br></p>
+
+<p>03 - BAIANA 1<br>
+Calabresa Moida , pimenta , ovos e cebola<br>
+R$: 26,00<br></p>
+
+<p>04 - CATUPIRY<br>
+Catupiry de Qualidade<br>
+R$26,00<br></p>
+
+<p>05 - CATUMILHO<br>
+Milho verde com catupiry<br>
+R$: 26,00<br></p>
+
+<p>06 - CALABRESA<br>
+Calabresa fatiada e cebola<br>
+R$: 26,00<br></p>
+
+<p>07 - DOIS QUEIJOS<br>
+Catupiry coberto com provolone<br>
+R$: 26,00<br></p>
+
+<p>08 - ESCAROLA<br>
+Escarola cozida temperada no Alho & Oléo , bacon e mussarela<br>
+R$: 26,00<br></p>
+
+<p>09 - MARGUERITA 1<br>
+Mussarela tomate e manjericão gratinado com parmesão<br>
+R$: 26,00<br></p>
+
+<p>10 - MILHO VERDE<br>
+Milho Verde coberto com mussarela<br>
+R$: 26,00<br></p>
+
+<p>11 - MUSSARELA<br>
+Mussarela de Qualidade<br>
+R$: 26,00<br></p>
+
+<p>12 - NAPOLITANA<br>
+Mussarela tomate e parmesão<br>
+R$: 26,00<br></p>
+
+<p>13 - PROVOLONE<br>
+Queijo provolone e tomate<br>
+R$: 26,00<br></p>
+
+<p>14 - BAURU<br>
+Presunto picado , tomate , mussarela ou catupiry<br>
+R$: 27,00<br></p>
+
+<p>15 - BACON<br>
+Fatias de bacon e mussarela<br>
+R$: 27,00<br></p>
+
+<p>16 - LOMBO 1<br>
+Lombo canadense fatiado , mussarela e cebola<br>
+R$: 27,00<br></p>
+
+<p>17 - PALMITO 1<br>
+Palmito coberto com mussarela<br>
+R$: 27,00<br></p>
+
+<p>18 - TOCASNA<br>
+Calabresa moida e mussarela<br>
+R$: 27,00<br></p>
+
+<p>19 - 3 QUEIJOS<br>
+<br>
+R$: 27,00<br></p>
+
+<p>20 - A MODA DA CASA<br>
+Lombo , bacon , palmito e catupiry<br>
+R$: 28,00<br></p>
+
+<p>21 - AMERICANA<br>
+Mussarela , presunto , ervilha , palmito e bacon<br>
+R$ 28,00<br></p>
+
+<p>22 - ATUM 2<br>
+Atum , cebola e catupiry<br>
+R$: 28,00<br></p>
+
+<p>23 - ATUM 3<br>
+Atum e Mussarela<br>
+R$: 28,00<br></p>
+
+<p>24 - BAIANA 2<br>
+Calabresa moida , ovo , pimenta , mussarela<br>
+R$: 28,00<br></p>
+
+<p>25 - BAIACATU<br>
+Calabresa moida , ovo , cebola e catupiry<br>
+R$: 28,00<br></p>
+
+<p>26 - BOLOGNA<br>
+Presunto , calabresa , ovo , mussarela e cebola<br>
+R$: 28,00<br></p>
+
+<p>27 - CARIOCA 1<br>
+Atum , ovo , cebola e pimenta<br>
+R$: 28,00<br></p>
+
+<p>28 - CHAMPIGNON<br>
+Champignon , tomate , cebola e mussarela<br>
+R$: 28,00<br></p>
+
+<p>29 - CORSEGA<br>
+Frango desfiado , catupiry , tomate e parmesão<br>
+R$: 28,00<br></p>
+
+<p>30 - DO PIZZAIOLO<br>
+Calabresa moida ,cebola , lombo e mussarela<br>
+R$: 28,00<br></p>
+
+<p>31 - FRANCESA<br>
+Calabresa , ovo , cebola , milho e mussarela<br>
+R$: 28,00<br></p>
+
+<p>32 - FRANGO<br>
+Peito de frango desfiado com mussarela<br>
+R$: 28,00<br></p>
+
+<p>33 - FRANCO COM CATUPIRY<br>
+Peito de frango desfiado com catupiry<br>
+R$: 28,00<br></p>
+
+<p>34 - ITALIANA<br>
+Presunto , bacon , ovo , catupiry<br>
+R$: 28,00<br></p>
+
+<p>35 - LOMBO 2<br>
+Lombo , palmito , mussarela e catupiry<br>
+R$: 28,00<br></p>
+
+<p>36 - MARGUERITA 2<br>
+Mussarela , tomate , manjericão gratinado com parmesão e alho<br>
+R$: 28,00<br></p>
+
+<p>37 - MEXICANA 1<br>
+Bacon , atum e catupiry<br>
+R$: 28,00<br></p>
+
+<p>38 - MILÃO<br>
+Presunto , ovo , mussarela e catupiry<br>
+R$: 28,00<br></p>
+
+<p>39 - PALMITO 2<br>
+Palmito especial e catupiry<br>
+R$: 28,00<br></p>
+
+<p>40 - PORTUGUESA<br>
+Presunto , ovo , ervilha , cebola coberto com mussarela<br>
+R$: 28,00<br></p>
+
+<p> 41 - 4 QUEIJOS<br>
+Mussarela , parmesão , catupiry e provolone<br>
+R$: 28,00<br></p>
+
+<p>42 - SICILIANA<br>
+Lombo canadense , catupiry e champignon<br>
+R$: 28,00<br></p>
+
+<p>43 - TOSCANA 2<br>
+Calabresa moida coberto com catupiry<br>
+R$: 28,00<br></p>
+
+<p>44 - A SUA ESCOLHA<br>
+4 ingredientes a sua escolha<br>
+R$: 30,00<br></p>
+
+<p>45 - CARIOCA 2<br>
+Atum , ovo , cebola , pimenta , champignon e mussarela<br>
+R$: 30,00<br></p>
+
+<p>46 - 5 QUEIJOS<br>
+Mussarela , catupiry , provolone , gorgonzola e parmesão<br>
+R$: 30,00<br></p>
+
+<p>47 - DIPLOMATA<br>
+Frango , milho , bacon , tomate seco , mussarela ou catupiry<br>
+R$: 30,00<br></p>
+
+<p>48 - DO CHEFE<br>
+Frango , catupiry , parmessão e palmito<br>
+R$: 30,00<br></p>
+
+<p>49 - FRANGO CAIPIRA<br>
+Frango , milho e cheddar<br>
+R$: 30,00<br></p>
+
+<p>50 - FRANGO A MODA<br>
+Frango , milho , bacon e mussarela<br>
+R$: 30,00<br></p>
+
+<p>51 - MIRELLA<br>
+Atum , mussarela , palmito , ervilha e cebola<br>
+R$: 30,00<br></p>
+
+<p>52 - MEXICANA 2<br>
+Presunto , calabresa , palmito , bacon , cebola e mussarela<br>
+R$: 30,00<br></p>
+
+<p>53 - PORTUGUESA ESPECIAL<br>
+Presunto , palmito , ovo , cebola , mussarela e catupiry<br>
+R$: 30,00<br></p>
+
+<p>54 - PEPERONE<br>
+Salame tipo peperone , mussarela e cebola<br>
+R$: 30,00<br></p>
+
+<p>55 - VENEZA<br>
+Mussarela , champignon e catupiry<br>
+R$: 30,00<br></p>
+
+<p>56 - CARNE SECA<br>
+Carne Seca , mussarela e catupiry<br>
+R$: 30,00<br></p>
+
+<h3>Pizzas Doces</h3>
+
+
+<p>57 - BRIGADEIRO<br>
+Chocolate ao Leite e Granulado<br>
+R$: 26,00<br></p>
+
+
+<p>58 - CHOCOBIS<br>
+Chocolate , bis derretido e bis triturado<br>
+R$: 26,00<br></p>
+
+<p>59 - PRESTIGIO<br>
+Chocolate ao Leite com coco ralado e leite condensado<br>
+R$:26,00<br></p>
+
+
+<p>60 - ROMEU E JULIETA<br>
+Mussarela , goiabada , canela , e leite condesando<br>
+R$: 26,00<br></p>
+
+
+<p>61 - M&Ms<br>
+Chocolate ao Leite e M&Ms<br>
+R$: 28,00<br></p>
+
+
+<p>62 - SONHO DE VALSA<br>
+Chocolate ao Leite , bombons e sonho de valsa<br>
+R$: 28,00<br></p>
+
+
+<p>63 - OURO BRANCO<br>
+Chocolate ao Leite e bombons OuroBranco<br>
+R$: 28,00<br></p>
+
+
+<br></br>
+<br></br>
+
+            </div>
+            
+            <div class="lateral">
+            <h1>R$ 24,00</h1>
+            <h4>PROMOÇÃO QUARTA MALUCA</h4>
+            <p>Mussarela, Calabresa, Frango, Alho & Oléo, Napolitana, Dois Queijos, Milho Verde, Catupiry e Baiana.</p>
+            <br>*Exceto Vesperas de Feriados!</br>
+            <br>*A cada 2 pizzas ganha um refrigerante dolly!</br>		
+            <br>*Taxa De Entrega Somente Para Fogazza R$: 2,00! </br>
+</div>
+<br></br>
+			 
+           
+            <div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td align="center"></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+            
+            
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>
+        
+        
+        
+<!--About Yosemite
+        <div class="conteudo" id="cont3">
+        
+<div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>-->
+            
+            
+            
+            
+<!--Geography
+<div class="conteudo" id="cont8">
+
+</div>
+<div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>-->
+        
+        
+        
+        
+<!--Things to do
+       <div class="conteudo" id="cont4">
+		</div>
+    <br><br>
+        	<div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>-->
+        
+        
+        
+        
+<!--Sobre Nós--> 
+        <div class="conteudo" id="cont5">
+                    <img src="images/mirella-banner.png" style="border: solid 2px #FFFFFF;">
+            <p>Pizzaria Mirella,
+Localizada na Cidade Tiradentes no Setor G, trabalhamos com produtos das melhores marcas, sempre atendendo da melhor forma possivel nossos clientes. Feito com carinho, pizzas saborosas, entregas rápidas. Qualidade garantida, produtos de primeira linha, venha saborear nossas deliciosas pizzas feito com carinho para clientes satisfeitos e nada melhor que saborear em casa com a família.</p>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.336957638517!2d-46.4000245854908!3d-23.592245468617556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6f9cf9b6ad39%3A0xb0e3941cadb8a2b9!2sR.+Mois%C3%A9s+de+Corena%2C+1118+-+Cidade+Tiradentes%2C+S%C3%A3o+Paulo+-+SP!5e0!3m2!1spt-BR!2sbr!4v1501441023428" width="400" height="300" frameborder="0" style="border:0"allowfullscree > </iframe>
+<br>Pizzaria Mirella, Moises de Corena 1118, Cidade Tiradentes - SP, 08475170</br>
+
+      <br></br>
+            <br><br>
+            <br><br>
+            
+            <div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>
+
+
+
+<!--Galeria--> 
+    <div class="conteudo" id="cont7">
+	
+ <div class="imageRow">
+    <div class="set">
+      <div class="single first">
+        <a href="images/examples/image-3.jpg" rel="lightbox[plants]" ><img src="images/examples/thumb-3.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-4.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-4.jpg"/></a>
+      </div>
+      
+      <div class="single">
+        <a href="images/examples/image-5.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-5.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-7.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-7.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-8.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-8.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-9.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-9.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-10.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-10.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-11.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-11.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-12.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-12.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-13.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-13.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-14.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-14.jpg"/></a>
+      </div>
+      <div class="single">
+        <a href="images/examples/image-15.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-15.jpg"/></a>
+      </div>
+      <div class="single last">
+        <a href="images/examples/image-6.jpg" rel="lightbox[plants]"><img src="images/examples/thumb-6.jpg"/></a>
+      </div>
+    </div>
+  </div>
+  <br></br>
+  <br></br>
+
+   
+ 
+    		<div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>
+    
+    
+    
+    
+<!--Contact Us
+        <div class="conteudo" id="cont6">
+       </div>
+        <br><br>
+            <div class="rodape">
+            <table border="0">
+            <tr><td colspan="8"><img src="images/integracao.png" style="padding: 10px 0px 15px 30px; float:left"></td>
+            <td></td>
+            <td></td>
+            <td colspan="20"><img src="images/whatsapp.png" style="padding: 10px 0px 15px 30px; float:left">                                                                                                                                        </td>
+         
+            <td><a href="mailto:mirellapizzaria16@outlook.com" target="_blank" dmle_dont_remove="target" dm_dont_rewrite_url="true"><img src="images/email.png" alt=" " </a> </td> 
+            <td colspan="2"> </td>
+            <td><a href="https://www.facebook.com/PizzariaMirellaCidadeTiradentes" target="_blank"> <img src="images/facebook.png" alt=" "</a> </td></tr>
+            
+            <tr><td colspan="12">(11)2282-4924  </td><td></td><td>(11)95156-5522</td></tr>
+            <tr><td colspan="4">(11)2837-9607</td></tr>
+            
+            </table>
+<br><img class="aligncenter size-full wp-image-528" style="vertical-align: bottom;margin-right: 150px">2017. Pizzaria Mirella. Direitos reservados.&nbsp;Desenvolvido por <a href="https://www.facebook.com/jeancarlos.destroie" target="_blank">Jean Carlos</a>.</br>
+           </div>
+          </div>-->
+        
+
+<!--end-->
+        </div>
+        
+    </body>
+</html>
